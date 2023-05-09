@@ -6,6 +6,9 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "strict": true,
-    "noEmit": true
-  }
+    "noEmit": true,
+    "declaration": true
+  },
+  "include": ["src/**/*", "./src/styles/font.d.ts"],
+  "exclude": ["node_modules"]
 }

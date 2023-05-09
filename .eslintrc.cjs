@@ -28,7 +28,10 @@ module.exports = {
     'prefer-arrow',
   ],
   rules: {
-    '@typescript-eslint/no-unused-vars': 'error',
+    'no-param-reassign': 'off',
+    'consistent-return': 'off',
+    'react/prop-types': 'off',
+    '@typescript-eslint/no-unused-vars': 1,
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
@@ -55,4 +58,5 @@ module.exports = {
       },
     ],
   },
+  ignorePatterns: ['test/*', 'src/assets/*'],
 };
