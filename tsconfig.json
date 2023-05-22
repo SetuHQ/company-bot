@@ -1,14 +1,23 @@
 {
   "compilerOptions": {
+    // Default
+    "target": "es5",
     "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noEmit": true,
-    "declaration": true
+    "skipLibCheck": true,
+    // Added
+    "jsx": "react",
+    "module": "ESNext",
+    "declaration": true,
+    "declarationDir": "types",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist"
   },
-  "include": ["src/**/*", "./src/styles/font.d.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "./src"
+  ]
 }
