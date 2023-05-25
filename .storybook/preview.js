@@ -1,6 +1,3 @@
-import { ThemeProvider } from 'fictoan-react';
-import { SetuLightTheme } from '../assets/Setu.light.theme';
-
 export const parameters = {
   actions: { argTypesRegex: '^on.*' },
   controls: {
@@ -14,11 +11,7 @@ export const parameters = {
 const withTheme = (StoryFn, context) => {
   const { theme } = context.parameters;
 
-  return (
-    // <ThemeProvider theme={storyTheme}>
-    <StoryFn />
-    // </ThemeProvider>
-  );
+  return <StoryFn />;
 };
 
 export const decorators = [withTheme];

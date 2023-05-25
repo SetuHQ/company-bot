@@ -9,6 +9,10 @@
     "noEmit": true,
     "declaration": true
   },
-  "include": ["src/**/*", "./src/styles/font.d.ts"],
+  "include": [
+    "src/**/*",
+    "./src/styles/font.d.ts",
+    "src/assets/setuColours.ts"
+  ],
   "exclude": ["node_modules"]
 }

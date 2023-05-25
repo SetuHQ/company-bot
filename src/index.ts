@@ -1,1 +1,1 @@
-export * from './SetuBotWidget/SetuBotWidget';
+export * from './CompanyBotWidget/CompanyBotWidget';
