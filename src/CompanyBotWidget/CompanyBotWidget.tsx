@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { CompanyBotWidgetStyled } from './CompanyBotWidget.styled';
 import { ChatBot } from '../assets/icons/ChatBot';
 import CompanyBotWidgetModal from './CompanyBotWidgetModal';
+import { useOnClickOutside } from '../hooks/hooks';
 
 export interface CompanyBotWidgetProps {
   description?: string;
@@ -19,6 +20,9 @@ export function CompanyBotWidget({
   const closeModal = () => {
     setOpenModal(false);
   };
+  const modalRef = useRef(null);
+  useOnClickOutside(modalRef, () => setOpenModal(false));
+
   return (
     <CompanyBotWidgetStyled primaryColor={primaryColor}>
       <div className="feedback-widget">
@@ -31,11 +35,13 @@ export function CompanyBotWidget({
         </button>
       </div>
       {openModal ? (
-        <CompanyBotWidgetModal
-          closeModal={closeModal}
-          primaryColor={primaryColor}
-          {...props}
-        />
+        <div ref={modalRef}>
+          <CompanyBotWidgetModal
+            closeModal={closeModal}
+            primaryColor={primaryColor}
+            {...props}
+          />
+        </div>
       ) : null}
     </CompanyBotWidgetStyled>
   );
