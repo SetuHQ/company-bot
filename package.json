@@ -1,13 +1,13 @@
 {
-  "name": "setu-ai-widget",
-  "description": "",
-  "version": "0.0.0",
+  "name": "@setu/company-bot",
+  "description": "Answer your customer queries with CompanyBot",
+  "version": "0.0.8",
   "author": "",
   "license": "MIT",
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/SetuHQ/setu-ai-widget.git"
+    "url": "https://github.com/SetuHQ/company-bot.git"
   },
   "scripts": {
     "dev": "concurrently \"yarn build --watch\" \"yarn storybook\" \"yarn test:watch\" ",
@@ -149,6 +149,7 @@
     "trim-newlines": ">=3.0.1"
   },
   "dependencies": {
+    "polished": "^4.2.2",
     "styled-components": "^5.3.10"
   }
 }

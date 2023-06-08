@@ -1,44 +1,44 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { CompanyBotWidgetStyled } from './CompanyBotWidget.styled';
-import { ChatBot } from '../assets/icons/ChatBot';
+import { GenericIcon } from '../assets/icons/GenericIcon';
+import { SetuIcon } from '../assets/icons/SetuIcon';
 import CompanyBotWidgetModal from './CompanyBotWidgetModal';
-import { useOnClickOutside } from '../hooks/hooks';
 
 export interface CompanyBotWidgetProps {
   description?: string;
   heading?: string;
-  primaryColor?: string;
+  iconBgColor?: string;
+  modalColor?: string;
   projectKey: string;
 }
 
 export function CompanyBotWidget({
-  primaryColor,
+  iconBgColor,
+  modalColor,
+  heading,
   ...props
 }: CompanyBotWidgetProps) {
   const [openModal, setOpenModal] = useState(false);
-
   const closeModal = () => {
     setOpenModal(false);
   };
-  const modalRef = useRef(null);
-  useOnClickOutside(modalRef, () => setOpenModal(false));
-
   return (
-    <CompanyBotWidgetStyled primaryColor={primaryColor}>
+    <CompanyBotWidgetStyled iconBgColor={iconBgColor}>
       <div className="feedback-widget">
         <button
           type="button"
           className="feedback-widget-trigger-button"
           onClick={() => setOpenModal(true)}
         >
-          <ChatBot />
+          {heading === 'SetuBot' ? <SetuIcon /> : <GenericIcon />}
         </button>
       </div>
       {openModal ? (
-        <div ref={modalRef}>
+        <div>
           <CompanyBotWidgetModal
             closeModal={closeModal}
-            primaryColor={primaryColor}
+            modalColor={modalColor}
+            heading={heading}
             {...props}
           />
         </div>

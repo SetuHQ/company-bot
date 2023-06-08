@@ -10,11 +10,7 @@ export default {
 } as Meta<typeof CompanyBotWidget>;
 
 const Template: StoryFn<typeof CompanyBotWidget> = (args) => (
-  <CompanyBotWidget
-    {...args}
-    // primaryColor="4c7812"
-    projectKey={process.env.PROJECT_KEY as string}
-  />
+  <CompanyBotWidget {...args} projectKey="REPLACE_YOUR_KEY_HERE" />
 );
 
 export const Primary = Template.bind({});

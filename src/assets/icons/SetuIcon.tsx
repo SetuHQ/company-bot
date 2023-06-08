@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ChatBot = () => (
+export const SetuIcon = () => (
   <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="4" y="28" width="3" height="12" rx="1.5" fill="white" />
     <rect x="57" y="28" width="3" height="12" rx="1.5" fill="white" />

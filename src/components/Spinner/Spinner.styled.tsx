@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export interface SpinnerStyledProps {
-  primaryColor?: string;
+  modalColor?: string;
 }
 
 export const SpinnerStyled = styled.div<SpinnerStyledProps>`
@@ -33,7 +33,7 @@ export const SpinnerStyled = styled.div<SpinnerStyledProps>`
     content: '';
     border: 3px solid;
     border-color: ${(props) =>
-      props.primaryColor ? `#${props.primaryColor}` : 'hsl(181,  58%,  53%)'};
+      props.modalColor ? `#${props.modalColor}` : '#6b92ba'};
     border-top-color: transparent;
     border-right-color: transparent;
     -webkit-animation: spinner 0.4s infinite linear;

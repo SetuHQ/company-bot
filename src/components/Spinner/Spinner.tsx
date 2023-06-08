@@ -2,10 +2,10 @@ import React from 'react';
 import { SpinnerStyled } from './Spinner.styled';
 
 export interface SpinnerProps {
-  primaryColor?: string;
+  modalColor?: string;
 }
-export const Spinner = ({ primaryColor }: SpinnerProps) => (
-  <SpinnerStyled primaryColor={primaryColor}>
+export const Spinner = ({ modalColor }: SpinnerProps) => (
+  <SpinnerStyled modalColor={modalColor}>
     <div className="spinner" />
   </SpinnerStyled>
 );
