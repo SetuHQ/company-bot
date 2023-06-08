@@ -76,7 +76,7 @@ export const CompanyBotWidgetStyled = styled.div<CompanyBotWidgetStyledProps>`
   .back-icon {
     font-family: 'Ibm Plex Sans', sans-serif;
     cursor: pointer;
-    color: '#213a50';
+    color: #213a50;
     margin-right: 8px;
     background: none;
     border: none;
