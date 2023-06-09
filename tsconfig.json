@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "declaration": true
+  },
+  "include": [
+    "src/**/*",
+    "./src/styles/font.d.ts",
+    "src/assets/setuColours.ts"
+  ],
+  "exclude": ["node_modules"]
+}
