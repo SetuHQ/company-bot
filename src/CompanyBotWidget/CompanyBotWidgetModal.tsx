@@ -1,31 +1,22 @@
 // @ts-nocheck
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Spinner } from '../components/Spinner/Spinner';
 
 interface CompanyBotWidgetModalProps {
   closeModal: () => void;
-  description?: string;
-  heading?: string;
-  modalColor?: string;
+  helperText?: string;
+  name?: string;
+  primaryColor?: string;
   projectKey: string;
 }
 const CompanyBotWidgetModal = ({
   closeModal,
   projectKey,
-  heading,
-  description,
-  modalColor,
+  name,
+  helperText,
+  primaryColor,
 }: CompanyBotWidgetModalProps) => {
   const [iframeLoading, setIframeLoading] = useState(true);
-  const [wasYesClicked, setWasYesClicked] = useState(false);
-  const [wasNoClicked, setWasNoClicked] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setWasNoClicked(false);
-      setWasYesClicked(false);
-    }, 5000);
-  }, [wasNoClicked, wasYesClicked]);
 
   return (
     <div className="widget-popover">
@@ -41,18 +32,18 @@ const CompanyBotWidgetModal = ({
         </button>
         {iframeLoading && (
           <div className="spinner-container">
-            <Spinner modalColor={modalColor} />
+            <Spinner primaryColor={primaryColor} />
           </div>
         )}
 
         <iframe
           id="ai-bot-iframe"
           title="ai-bot-widget"
-          src={`https://staging.docs.setu.co/bot-widget?projectKey=${projectKey}&heading=${
-            heading || 'CompanyBot'
+          src={`https://docs.setu.co/bot-widget?projectKey=${projectKey}&heading=${
+            name || 'CompanyBot'
           }&description=${
-            description || 'Get answers regarding our company'
-          }&primaryColor=${modalColor || '6b92ba'}`}
+            helperText || 'Get answers regarding our company'
+          }&primaryColor=${primaryColor || '6b92ba'}`}
           style={{ width: '100%', height: '100%', border: 'none' }}
           onLoad={(e) => {
             setIframeLoading(false);

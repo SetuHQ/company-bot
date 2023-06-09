@@ -1,7 +1,7 @@
 {
   "name": "@setu/company-bot",
   "description": "Answer your customer queries with CompanyBot",
-  "version": "0.0.8",
+  "version": "0.1.1",
   "author": "",
   "license": "MIT",
   "keywords": [],
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "concurrently \"yarn build --watch\" \"yarn storybook\" \"yarn test:watch\" ",
-    "build": "tsup --onSuccess \"yarn yalc publish\"",
+    "build": "tsup",
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore \"{src,tests}/**/*.+(ts|js|tsx)\"",
     "lint:fix": "yarn lint --fix && prettier --write .",

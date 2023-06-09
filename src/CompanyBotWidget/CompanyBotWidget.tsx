@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
 import { CompanyBotWidgetStyled } from './CompanyBotWidget.styled';
-import { GenericIcon } from '../assets/icons/GenericIcon';
 import { SetuIcon } from '../assets/icons/SetuIcon';
+import { GenericIcon } from '../assets/icons/GenericIcon';
 import CompanyBotWidgetModal from './CompanyBotWidgetModal';
 
 export interface CompanyBotWidgetProps {
-  description?: string;
-  heading?: string;
-  iconBgColor?: string;
-  modalColor?: string;
+  helperText?: string;
+  name?: string;
+  primaryColor?: string;
   projectKey: string;
 }
 
 export function CompanyBotWidget({
-  iconBgColor,
-  modalColor,
-  heading,
+  primaryColor,
+  name,
   ...props
 }: CompanyBotWidgetProps) {
   const [openModal, setOpenModal] = useState(false);
@@ -23,22 +21,26 @@ export function CompanyBotWidget({
     setOpenModal(false);
   };
   return (
-    <CompanyBotWidgetStyled iconBgColor={iconBgColor}>
-      <div className="feedback-widget">
+    <CompanyBotWidgetStyled primaryColor={primaryColor}>
+      <div className="company-bot">
         <button
           type="button"
-          className="feedback-widget-trigger-button"
+          className="company-bot-button"
           onClick={() => setOpenModal(true)}
         >
-          {heading === 'SetuBot' ? <SetuIcon /> : <GenericIcon />}
+          {name === 'SetuBot' ? (
+            <SetuIcon />
+          ) : (
+            <GenericIcon color={primaryColor || '6B92BA'} />
+          )}
         </button>
       </div>
       {openModal ? (
         <div>
           <CompanyBotWidgetModal
             closeModal={closeModal}
-            modalColor={modalColor}
-            heading={heading}
+            primaryColor={primaryColor}
+            name={name}
             {...props}
           />
         </div>

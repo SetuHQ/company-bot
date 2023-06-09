@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { lighten } from 'polished';
 import '../styles/fonts.css';
 
 interface CompanyBotWidgetStyledProps {
-  iconBgColor?: string;
+  primaryColor?: string;
 }
 
 export const CompanyBotWidgetStyled = styled.div<CompanyBotWidgetStyledProps>`
@@ -10,7 +11,8 @@ export const CompanyBotWidgetStyled = styled.div<CompanyBotWidgetStyledProps>`
   --color-primary: #152533;
   --color-text: white;
   --input-height: 46px;
-  .feedback-widget {
+
+  .company-bot {
     font-family: 'Ibm Plex Sans', sans-serif;
     z-index: 99999;
     position: fixed;
@@ -26,7 +28,7 @@ export const CompanyBotWidgetStyled = styled.div<CompanyBotWidgetStyledProps>`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .feedback-widget-trigger-button {
+  .company-bot-button {
     font-family: 'Ibm Plex Sans', sans-serif;
     cursor: pointer;
     z-index: 1;
@@ -36,7 +38,9 @@ export const CompanyBotWidgetStyled = styled.div<CompanyBotWidgetStyledProps>`
     width: 60px;
     height: 60px;
     background: ${(props) =>
-      props.iconBgColor ? `#${props.iconBgColor}` : `#cbd9e7`};
+      props.primaryColor
+        ? lighten(0.3, `#${props.primaryColor}`)
+        : lighten(0.3, `#6b92ba`)};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +66,7 @@ export const CompanyBotWidgetStyled = styled.div<CompanyBotWidgetStyledProps>`
     z-index: 1000000000;
     display: flex;
     background-color: hsl(0, 0%, 100%);
-    color: '#213a50';
+    color: #213a50;
     width: 30%;
     height: 100%;
     overflow-y: scroll;
@@ -76,7 +80,7 @@ export const CompanyBotWidgetStyled = styled.div<CompanyBotWidgetStyledProps>`
   .back-icon {
     font-family: 'Ibm Plex Sans', sans-serif;
     cursor: pointer;
-    color: '#213a50';
+    color: #213a50;
     margin-right: 8px;
     background: none;
     border: none;
