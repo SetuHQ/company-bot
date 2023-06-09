@@ -10,7 +10,7 @@ Check out the [demo](https://demo-company-bot.vercel.app/)
 [![Downloads](https://img.shields.io/npm/dw/@setu/company-bot?color=%23FEB452)](https://www.npmjs.org/package/@setu/company-bot)
 [![License](https://img.shields.io/npm/l/@setu/company-bot?color=%23FE90A0)](LICENSE.md)
 
-![code-jsx](https://github.com/SetuHQ/company-bot/assets/9695866/1d6b77fd-aef2-493b-b38b-bbf2335a75dd)
+<img src="https://user-images.githubusercontent.com/9695866/244606335-f6521b46-2091-449b-95c9-f60cde8c9d44.png" alt="JSX code" width="100%" />
 
 ## Getting started
 
@@ -24,7 +24,7 @@ Visit [Markprompt](https://markprompt.com)
 
 Read more about training your data [here](https://markprompt.com/docs#processing-your-content)
 
-<img src="https://github.com/SetuHQ/company-bot/assets/9695866/f81917bf-c894-4670-af06-7475033d6dbe" alt="Markprompt Data" width="100%" />
+<img src="https://user-images.githubusercontent.com/9695866/244606089-ab70738e-3756-4781-8021-cb6bfbe06c9a.png" alt="Markprompt Data" width="100%" />
 
 ### 2. Obtain project keys
 
@@ -32,7 +32,7 @@ Read more about training your data [here](https://markprompt.com/docs#processing
 
 - Obtain the `Production` project key which will be used in the CompanyBot widget
 
-<img src="https://github.com/SetuHQ/company-bot/assets/9695866/14ad3292-6e95-435c-8e05-ec04e39d9ce0" alt="Markprompt Settings" width="100%" />
+<img src="https://user-images.githubusercontent.com/9695866/244606072-6f5d7d1d-aeae-4952-813a-49ae63d91258.png" alt="Markprompt Settings" width="100%" />
 
 ### 3. Install the package
 
