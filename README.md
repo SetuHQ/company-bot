@@ -1,8 +1,8 @@
 # CompanyBot
 
-CompanyBot is an open-source plug-n-play knowledge companion for your company's information.
+CompanyBot is an open-source plug-n-play knowledge companion for your company
 
-Using [Markprompt](https://markprompt.com) by [Motif](https://motif.land/), train GPT models with youe documentation/knowledge base and help customers get their queries answered with ease.
+Using [Markprompt](https://markprompt.com) by [Motif](https://motif.land/), train GPT models with your documentation/knowledge base and help customers get their queries answered with ease.
 
 Check out the [demo](https://demo-company-bot.vercel.app/)
 
@@ -10,7 +10,7 @@ Check out the [demo](https://demo-company-bot.vercel.app/)
 [![Downloads](https://img.shields.io/npm/dw/@setu/company-bot?color=%23FEB452)](https://www.npmjs.org/package/@setu/company-bot)
 [![License](https://img.shields.io/npm/l/@setu/company-bot?color=%23FE90A0)](LICENSE.md)
 
-<img src="https://raw.githubusercontent.com/SetuHQ/node-upi-deep-links/master/docs/deeplinks.png" alt="SDK in action" width="100%">
+![code-jsx](https://github.com/SetuHQ/company-bot/assets/9695866/1d6b77fd-aef2-493b-b38b-bbf2335a75dd)
 
 ## Getting started
 
@@ -24,11 +24,15 @@ Visit [Markprompt](https://markprompt.com)
 
 Read more about training your data [here](https://markprompt.com/docs#processing-your-content)
 
+<img src="https://github.com/SetuHQ/company-bot/assets/9695866/f81917bf-c894-4670-af06-7475033d6dbe" alt="Markprompt Data" width="100%" />
+
 ### 2. Obtain project keys
 
 - Once training is complete, head to the `Settings` section and add `docs.setu.co` in the Whitelisted domains section.
 
 - Obtain the `Production` project key which will be used in the CompanyBot widget
+
+<img src="https://github.com/SetuHQ/company-bot/assets/9695866/14ad3292-6e95-435c-8e05-ec04e39d9ce0" alt="Markprompt Settings" width="100%" />
 
 ### 3. Install the package
 
