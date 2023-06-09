@@ -4,7 +4,7 @@ CompanyBot is an open-source plug-n-play knowledge companion for your company
 
 Using [Markprompt](https://markprompt.com) by [Motif](https://motif.land/), train GPT models with your documentation/knowledge base and help customers get their queries answered with ease.
 
-Check out the [demo](https://demo-company-bot.vercel.app/)
+Check out the [demo](https://demo-company-bot-sigma.vercel.app/)
 
 [![Version](https://img.shields.io/npm/v/@setu/company-bot?color=%2320014B)](https://www.npmjs.org/package/@setu/company-bot)
 [![Downloads](https://img.shields.io/npm/dw/@setu/company-bot?color=%23FEB452)](https://www.npmjs.org/package/@setu/company-bot)
@@ -93,7 +93,7 @@ Let's use
 />
 ```
 
-You can play around with the bot in this [demo](https://demo-company-bot.vercel.app/)
+You can play around with the bot in this [demo](https://demo-company-bot-sigma.vercel.app/)
 
 ## License
 
